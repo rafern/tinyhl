@@ -1,0 +1,19 @@
+A HLAPI library for Open Computers 2: Reimagined. Only tested on a custom 1.21.1
+build, but should work for 1.20.
+
+Currently supports:
+- device listing
+- basic bus I/O (method invocations, etc...)
+- redstone devices
+
+See the header files in the `src` folder for documentation, and the
+examples/utils folders for examples.
+
+Run the `build.sh` script to build. Development was done inside OC2R, so the
+build script uses `tcc`, there is no Makefile, and you must use the `import.lua`
+built-in script to transfer the project into OC2R. Since the script only does
+single file transfers, make sure to archive the `src` folder into a tar file and
+transfer it instead.
+
+To install, move the header files to a new /usr/include/tinyhl folder, and the
+generated .so files to /usr/lib. Note that this hasn't been tested yet.
